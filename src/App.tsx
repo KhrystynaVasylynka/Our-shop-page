@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Currency, exchangeValue, Product, productsArray } from './data'
-import CurrenciesList from './components/CurrenciesList'
-import ProductList from './components/ProductList'
+import CurrenciesList from './components/CurrenciesList/CurrenciesList'
+import ProductList from './components/ProductList/ProductList'
+import './App.css'
 
 const App = () => {
     const productCountsInit = productsArray.reduce((cur, acc) => {
@@ -39,7 +40,7 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div className="flex">
             <h1>Our shop page</h1>
             <CurrenciesList onChangeCurrency={onCurrencyChange} />
             <ProductList

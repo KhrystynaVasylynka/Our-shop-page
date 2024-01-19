@@ -1,4 +1,4 @@
-import { Currency, Product, exchangeValue } from '../data'
+import { Currency, Product, exchangeValue } from '../../data'
 
 type Props = {
     product: Product
@@ -9,7 +9,7 @@ type Props = {
 const ProductItem = ({ product, currency, onBuy }: Props) => {
     const price = product.price * exchangeValue[currency]
     return (
-        <div>
+        <div className="test">
             <h3>{product.title}</h3>
             <p>{product.description}</p>
             <p>
